@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const prefix = require("./botconfig.json");
 const client = new Discord.Client();
 
 //ready -> bot is online!
