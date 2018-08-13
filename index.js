@@ -1,4 +1,3 @@
-const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
 
 const client = new Discord.Client({disableEveryone: true})
@@ -56,4 +55,4 @@ client.on('message', message => {
     }
 });
 
-client.login(botconfig.token);
+client.login(process.env.BOT_TOKEN);
