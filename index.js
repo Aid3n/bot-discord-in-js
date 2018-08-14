@@ -13,12 +13,33 @@ client.on('message', message => {
     }
 });
 
-//what is my avatar -> avatar url
-client.on('message', message => {
-    if (message.content === 'what is my avatar')
-        return message.channel.send('This is your avatar! ' +message.author.avatarURL);
-    }
-);
+//what is my avatar, What is my avatar, what is my avatar?, What is my avatar? -> avatar url
+//start
+const wima = require ("./cmd/wima.js");
+client.on("message", (message) => {
+    if(message.content == "what is my avatar"){
+            wima(message);
+        }
+})
+const wima = require ("./cmd/wima.js");
+client.on("message", (message) => {
+    if(message.content == "What is my avatar"){
+            wima(message);
+        }
+})
+const wima = require ("./cmd/wima.js");
+client.on("message", (message) => {
+    if(message.content == "what is my avatar?"){
+            wima(message);
+        }
+})
+const wima = require ("./cmd/wima.js");
+client.on("message", (message) => {
+    if(message.content == "What is my avatar?"){
+            wima(message);
+        }
+})
+//end
 
 client.on('message', message => {
     if (message.content === '!hello') {
@@ -38,6 +59,7 @@ client.on('message', message => {
     }
 });
 
+// javi aprueba -> image
 const javi_ap = require ("./cmd/javi_ap.js");
 client.on("message", (message) => {
     if(message.content == "javi aprueba"){
