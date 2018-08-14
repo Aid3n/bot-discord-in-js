@@ -40,7 +40,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === 'javi aprueba')
-        return message.channel.send('', {
+        return message.channel.send({
             files: [
                 "./jm.jpg"
             ]
