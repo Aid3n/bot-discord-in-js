@@ -105,7 +105,8 @@ client.on("guildMemberAdd", (member) => {
     if(guild.systemChannel){
         guild.systemChannel.send(new Discord.RichEmbed() 
         .setTitle("Usuario nuevo!")
-        .setDescription(memberTag + " ha entrado al servidor!")
+        .setColor('f4eb42')
+	.setDescription(memberTag + " ha entrado al servidor!")
         .setThumbnail(member.user.displayAvatarURL) 
         .addField("Número de miembros", member.guild.memberCount)
         .setTimestamp()
