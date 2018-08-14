@@ -1,5 +1,5 @@
 module.exports = (message) => {
-    message.channel.send('Hay mi niño <3', {
+    message.channel.send('Hay mi niño ❤', {
             files: [
                 "./files/krilin.jpg"
             ]
