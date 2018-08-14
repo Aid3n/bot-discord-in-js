@@ -42,7 +42,7 @@ client.on('message', message => {
     if (message.content === 'javi aprueba')
         return message.channel.send('Javi guapo', {
             files: [
-                "./files/jm.jpg"
+                "./jm.jpg"
             ]
         });
     }
