@@ -78,7 +78,7 @@ client.on('message', message => {
 
 //!krilin
 client.on("message", (message) => {
-    if(message.content == "!krilin"){
+    if(message.content === "!krilin"){
             krilin(message);
         }
 })
