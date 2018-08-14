@@ -48,4 +48,11 @@ client.on('message', message => {
     }
 );
 
+client.on('message', message => {
+    if (message.content === '!github')
+        return message.channel.send('You cand find my github project here!\n-> https://github.com/Aid3n/bot-discord-in-js <-');
+    }
+);
+
+
 client.login(process.env.BOT_TOKEN);
