@@ -19,4 +19,16 @@ client.on('message', message => {
     }
 });
 
+client.on('message', message => {
+    if (message.content === '!hello') {
+        return message.channel.send("Hello!");
+    }
+});
+
+client.on('message', message => {
+    if (message.content === 'aquech') {
+        return message.channel.send("<@335796011194777611> mongolo vete al maincra");
+    }
+});
+
 client.login(process.env.BOT_TOKEN);
