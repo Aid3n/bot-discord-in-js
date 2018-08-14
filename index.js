@@ -112,7 +112,7 @@ client.on("guildMemberAdd", (member) => {
         .setTimestamp()
         );
     }
-    });
+});
 
 
 client.login(process.env.BOT_TOKEN);
