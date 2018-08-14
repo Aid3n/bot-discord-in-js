@@ -13,29 +13,11 @@ client.on('message', message => {
     }
 });
 
-//what is my avatar, What is my avatar, what is my avatar?, What is my avatar? -> avatar url
+//what is my avatar -> avatar url
 //start
 const wima = require ("./cmd/wima.js");
 client.on("message", (message) => {
     if(message.content == "what is my avatar"){
-            wima(message);
-        }
-})
-const wima = require ("./cmd/wima.js");
-client.on("message", (message) => {
-    if(message.content == "What is my avatar"){
-            wima(message);
-        }
-})
-const wima = require ("./cmd/wima.js");
-client.on("message", (message) => {
-    if(message.content == "what is my avatar?"){
-            wima(message);
-        }
-})
-const wima = require ("./cmd/wima.js");
-client.on("message", (message) => {
-    if(message.content == "What is my avatar?"){
             wima(message);
         }
 })
