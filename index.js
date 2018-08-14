@@ -38,4 +38,10 @@ client.on('message', message => {
     }
 });
 
+client.on('message', message => {
+    if (message.content === 'javi aprueba') {
+        return message.channel.send("https://media.discordapp.net/attachments/478212775366361107/478877823860211724/IMG-20180814-WA0003.jpg");
+    }
+});
+
 client.login(process.env.BOT_TOKEN);
