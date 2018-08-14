@@ -13,11 +13,12 @@ client.on('message', message => {
     }
 });
 
+//what is my avatar -> avatar url
 client.on('message', message => {
-    if (message.content === 'what is my avatar') {
-        return message.channel.send(message.author.avatarURL);
+    if (message.content === 'what is my avatar')
+        return message.channel.send('This is your avatar! ' +message.author.avatarURL);
     }
-});
+);
 
 client.on('message', message => {
     if (message.content === '!hello') {
