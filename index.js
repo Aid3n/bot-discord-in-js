@@ -54,5 +54,19 @@ client.on('message', message => {
     }
 );
 
+client.on("guildMemberAdd", (member) => { 
+    let guild = member.guild; 
+    let memberTag = member.user.tag; 
+    if(guild.systemChannel){
+        guild.systemChannel.send(new Discord.RichEmbed() 
+        .setTitle("A new user joined")
+        .setDescription(memberTag + " has joined the guild")
+        .setThumbnail(member.user.displayAvatarURL) 
+        .addField("Members now", member.guild.memberCount)
+        .setTimestamp()
+        );
+    }
+    });
+
 
 client.login(process.env.BOT_TOKEN);
