@@ -83,6 +83,14 @@ client.on("message", (message) => {
         }
 })
 
+const embed1 = require ("./cmd/embed1.js");
+client.on("message", (message) => {
+    if(message.content == "!embed1"){
+            embed1(message);
+        }
+})
+
+
 //on join
 client.on("guildMemberAdd", (member) => { 
     let guild = member.guild; 
