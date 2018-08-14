@@ -8,6 +8,7 @@ const wima = require ("./cmd/wima.js");
 const like = require ("./cmd/react/like.js")
 const dislike = require ("./cmd/react/dislike.js")
 const rt = require ("./cmd/react/rt.js")
+const krilin = require ("./cmd/krilin.js");
 
 //ready
 client.on("ready", async () => {
@@ -58,7 +59,7 @@ client.on("message", (message) => {
         }
 })
 
-//reacts: like, dislike, rt
+//reacts: !like, !dislike, !rt
 client.on('message', message => {
     if (message.content === '!like'){
             like(message);
@@ -72,6 +73,13 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.content === '!rt'){
             rt(message);
+        }
+})
+
+//!krilin
+client.on("message", (message) => {
+    if(message.content == "!krilin"){
+            krilin(message);
         }
 })
 
