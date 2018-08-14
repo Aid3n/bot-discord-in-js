@@ -5,6 +5,9 @@ const javi_ap = require ("./cmd/javi_ap.js");
 const ping = require ("./cmd/ping.js");
 const git = require ("./cmd/git.js");
 const wima = require ("./cmd/wima.js");
+const like = require ("./cmd/react/like.js")
+const dislike = require ("./cmd/react/dislike.js")
+const rt = require ("./cmd/react/rt.js")
 
 //ready
 client.on("ready", async () => {
@@ -52,6 +55,23 @@ client.on('message', message => {
 client.on("message", (message) => {
     if(message.content == "javi aprueba"){
             javi_ap(message);
+        }
+})
+
+//reacts: like, dislike, rt
+client.on('message', message => {
+    if (message.content === '!like'){
+            like(message);
+        }
+})
+client.on('message', message => {
+    if (message.content === '!dislike'){
+            dislike(message);
+        }
+})
+client.on('message', message => {
+    if (message.content === '!rt'){
+            rt(message);
         }
 })
 
