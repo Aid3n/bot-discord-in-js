@@ -59,10 +59,10 @@ client.on("guildMemberAdd", (member) => {
     let memberTag = member.user.tag; 
     if(guild.systemChannel){
         guild.systemChannel.send(new Discord.RichEmbed() 
-        .setTitle("A new user joined")
-        .setDescription(memberTag + " has joined the guild")
+        .setTitle("Usuario nuevo!")
+        .setDescription(memberTag + " ha entrado al servidor!")
         .setThumbnail(member.user.displayAvatarURL) 
-        .addField("Members now", member.guild.memberCount)
+        .addField("Número de miembros", member.guild.memberCount)
         .setTimestamp()
         );
     }
