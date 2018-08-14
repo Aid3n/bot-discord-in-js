@@ -38,15 +38,12 @@ client.on('message', message => {
     }
 });
 
-client.on('message', message => {
-    if (message.content === 'javi aprueba')
-        return message.channel.send({
-            files: [
-                "./jm.jpg"
-            ]
-        });
-    }
-);
+const javi_ap = require ("./cmd/javi_ap.js");
+client.on("message", (message) => {
+    if(message.content == "javi aprueba"){
+            javi_ap(message);
+        }
+})
 
 client.on('message', message => {
     if (message.content === '!github')
