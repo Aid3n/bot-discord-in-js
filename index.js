@@ -31,4 +31,10 @@ client.on('message', message => {
     }
 });
 
+client.on('message', message => {
+    if (message.content === '<@455725168556245003>') {
+        return message.channel.send("Mi prefijo aquí es _**!**_");
+    }
+});
+
 client.login(process.env.BOT_TOKEN);
