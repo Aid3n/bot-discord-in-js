@@ -40,6 +40,12 @@ client.on("message", (message) => {
             wima(message);
         }
 })
+//
+client.on('message', message => {
+	if (message.content === 'x45/33' ) {
+		return message.channel.send("puto");
+	}
+});
 //!hello
 client.on('message', message => {
     if (message.content === '!hello') {
@@ -96,7 +102,6 @@ client.on("message", (message) => {
             embed1(message);
         }
 })
-
 
 //on join
 client.on("guildMemberAdd", (member) => { 
