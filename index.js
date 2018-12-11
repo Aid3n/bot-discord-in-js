@@ -52,6 +52,12 @@ client.on('message', message => {
         return message.channel.send("Hello!");
     }
 });
+//
+client.on('message', message => {
+	if (message.content === '!pene') {
+		return message.channel.send("https://media.istockphoto.com/illustrations/angry-penis-funny-comic-cartoon-illustration-illustration-id469692444");
+	}
+});
 //aquech
 client.on('message', message => {
     if (message.content === 'aquech') {
